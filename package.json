@@ -1,73 +1,15 @@
 {
-  "name": "@y/websocket",
-  "version": "4.0.0-3",
-  "description": "Websockets provider for Yjs",
-  "main": "./dist/y-websocket.cjs",
-  "module": "./src/y-websocket.js",
-  "types": "./dist/src/y-websocket.d.ts",
-  "type": "module",
-  "sideEffects": false,
-  "funding": {
-    "type": "GitHub Sponsors ❤",
-    "url": "https://github.com/sponsors/dmonad"
-  },
+  "name": "northflank-y-websocket",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Production Yjs Websocket Server",
   "scripts": {
-    "clean": "rm -rf dist",
-    "dist": "npm run clean && rollup -c && tsc --skipLibCheck",
-    "lint": "standard && tsc --skipLibCheck",
-    "test": "npm run lint",
-    "start": "node node_modules/@y/websocket/bin/server.cjs --port $PORT --host 0.0.0.0",
-    "preversion": "npm run dist && test -e dist/y-websocket.d.ts && test -e dist/y-websocket.cjs"
-  },
-  "files": [
-    "dist/*",
-    "src/*"
-  ],
-  "exports": {
-    "./package.json": "./package.json",
-    ".": {
-      "module": "./src/y-websocket.js",
-      "import": "./src/y-websocket.js",
-      "require": "./dist/y-websocket.cjs",
-      "types": "./dist/y-websocket.d.ts",
-      "default": "./src/y-websocket.js"
-    }
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/yjs/y-websocket.git"
-  },
-  "keywords": [
-    "Yjs"
-  ],
-  "author": "Kevin Jahns <kevin.jahns@protonmail.com>",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/yjs/y-websocket/issues"
-  },
-  "homepage": "https://github.com/yjs/y-websocket#readme",
-  "standard": {
-    "ignore": [
-      "/dist",
-      "/node_modules"
-    ]
+    "start": "y-websocket"
   },
   "dependencies": {
-    "@y/protocols": "^1.0.6-3",
-    "lib0": "^0.2.115-6"
-  },
-  "devDependencies": {
-    "@types/node": "^22.14.0",
-    "rollup": "^4.43.0",
-    "standard": "^17.1.2",
-    "typescript": "^5.8.3",
-    "@y/y": "^14.0.0-16"
-  },
-  "peerDependencies": {
-    "@y/y": "^14.0.0-16"
+    "y-websocket": "^1.5.0"
   },
   "engines": {
-    "npm": ">=8.0.0",
     "node": ">=16.0.0"
   }
 }
