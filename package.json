@@ -16,7 +16,7 @@
     "dist": "npm run clean && rollup -c && tsc --skipLibCheck",
     "lint": "standard && tsc --skipLibCheck",
     "test": "npm run lint",
-    "start": "node node_modules/@y/websocket/bin/server.js --port $PORT --host 0.0.0.0",
+    "start": "node node_modules/@y/websocket/bin/server.cjs --port $PORT --host 0.0.0.0",
     "preversion": "npm run dist && test -e dist/y-websocket.d.ts && test -e dist/y-websocket.cjs"
   },
   "files": [
